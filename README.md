@@ -5,7 +5,7 @@
 The portfolio has six repositories and no front desk. This is the front desk.
 
 ```bash
-pip install "certified-kit @ git+https://github.com/nickharris808/certified-kit@main"
+pip install "certified-kit @ git+https://github.com/nickharris808/certified-kit.git@main"
 certified-kit list
 ```
 
@@ -103,7 +103,7 @@ so and gives the install line. It never behaves as though a check ran.
 ```
 $ certified-kit build demo
 `certified-kit build` needs lcert-build, which is not installed.
-    pip install "lcert-build @ git+https://github.com/nickharris808/lcert-build@main"
+    pip install "lcert-build @ git+https://github.com/nickharris808/lcert-build.git@main"
 ```
 
 ## The components

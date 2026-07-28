@@ -21,11 +21,11 @@ classifiers = [
   "Topic :: Software Development :: Quality Assurance",
 ]
 dependencies = [
-  "lcert-verify @ git+https://github.com/nickharris808/lcert-verify@main",
-  "lcert-build @ git+https://github.com/nickharris808/lcert-build@main",
-  "equiv-receipt @ git+https://github.com/nickharris808/equiv-receipt@main",
-  "prereg-seal @ git+https://github.com/nickharris808/prereg-seal@main",
-  "cert-atlas @ git+https://github.com/nickharris808/cert-atlas@main",
+  "lcert-verify @ git+https://github.com/nickharris808/lcert-verify.git@main",
+  "lcert-build @ git+https://github.com/nickharris808/lcert-build.git@main",
+  "equiv-receipt @ git+https://github.com/nickharris808/equiv-receipt.git@main",
+  "prereg-seal @ git+https://github.com/nickharris808/prereg-seal.git@main",
+  "cert-atlas @ git+https://github.com/nickharris808/cert-atlas.git@main",
 ]
 
 [project.optional-dependencies]
