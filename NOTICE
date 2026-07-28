@@ -1,0 +1,8 @@
+certkit
+Copyright 2026 nickharris808
+
+Licensed under the Apache License, Version 2.0.
+
+certkit contains no verification logic. It installs and dispatches to the
+components listed in its README, each of which is independently installable
+and auditable.

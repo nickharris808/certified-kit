@@ -1,0 +1,58 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    name: py${{ matrix.python }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ["3.9", "3.10", "3.11", "3.12", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "${{ matrix.python }}"
+      - name: Install
+        run: pip install -e ".[test]"
+      - name: Every component is reachable
+        run: certified-kit list
+      - name: Test
+        run: pytest -q
+      - name: Build distribution
+        run: |
+          pip install --quiet build
+          python -m build
+
+  partial-environment:
+    name: a missing component is named, not skipped
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      # Install certified-kit WITHOUT its components, and assert it says so rather than
+      # behaving as though a check had passed.
+      - run: pip install --no-deps -e .
+      - run: |
+          set -e
+          rc=0
+          certified-kit build demo || rc=$?
+          test "$rc" -eq 5
+          certified-kit list | grep -q "NOT INSTALLED"
+
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install --quiet ruff
+      - run: ruff check .

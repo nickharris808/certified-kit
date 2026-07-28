@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "certified-kit"
+version = "1.0.0"
+description = "One install and one command for the whole certificate-verification toolkit."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "Apache-2.0" }
+authors = [{ name = "nickharris808" }]
+keywords = ["certificate", "verification", "provenance", "reproducibility", "sat", "drat"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: Apache Software License",
+  "Programming Language :: Python :: 3",
+  "Topic :: Scientific/Engineering",
+  "Topic :: Software Development :: Quality Assurance",
+]
+dependencies = [
+  "lcert-verify @ git+https://github.com/nickharris808/lcert-verify@main",
+  "lcert-build @ git+https://github.com/nickharris808/lcert-build@main",
+  "equiv-receipt @ git+https://github.com/nickharris808/equiv-receipt@main",
+  "prereg-seal @ git+https://github.com/nickharris808/prereg-seal@main",
+  "cert-atlas @ git+https://github.com/nickharris808/cert-atlas@main",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+
+[project.urls]
+Homepage = "https://github.com/nickharris808/certified-kit"
+Portfolio = "https://github.com/nickharris808/certified-oss"
+
+[project.scripts]
+certified-kit = "certified_kit.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

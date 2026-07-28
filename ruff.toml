@@ -1,0 +1,19 @@
+# Lint configuration for the open-source packages.
+line-length = 100
+target-version = "py39"
+
+# The frozen verifier is extracted verbatim from the reference implementation and
+# its bytes are the artifact — reformatting it would break the "copy this one file
+# and run it" property and invalidate any published digest of it. It is excluded
+# from style rules deliberately; its correctness is covered by the test suite and
+# the JS conformance comparison, not by lint.
+exclude = [
+  "lcert-verify/src/lcert_verify/_verifier.py",
+  # Tutorial notebooks are prose with illustrative code; compact idioms there aid
+  # reading. They are executed end-to-end by the docs check, which is the guarantee
+  # that matters for them.
+  "docs/*.ipynb",
+]
+
+[lint]
+select = ["E", "F", "W"]
