@@ -2,7 +2,7 @@
 
 **One install and one command for the whole toolkit.**
 
-The portfolio has six repositories and no front desk. This is the front desk.
+The portfolio has nine repositories and no front desk. This is the front desk.
 
 ```bash
 pip install "certified-kit @ git+https://github.com/nickharris808/certified-kit.git@main"
@@ -122,7 +122,29 @@ Apache-2.0.
 
 ---
 
-One idea, six pieces: **a recorded verdict is a claim to be checked, never an input to be trusted.**
+**A recorded verdict is a claim to be checked, never an input to be trusted.** Nine repositories are built on it.
 
 The whole story, and the objections answered, live at
 **[certified-oss](https://github.com/nickharris808/certified-oss)**.
+
+## Documentation
+
+- **[TUTORIAL.md](TUTORIAL.md)** — a worked walkthrough
+- **[CLI.md](CLI.md)** — every flag, generated from the parser
+- **[TROUBLESHOOTING.md](TROUBLESHOOTING.md)** — the errors you will actually hit
+- **[PERFORMANCE.md](PERFORMANCE.md)** — measured, including what was not optimised
+- **[CONTRIBUTING.md](CONTRIBUTING.md)** — Contributing
+
+Portfolio-wide: **[Tutorial](https://github.com/nickharris808/certified-oss/blob/main/TUTORIAL.md)**
+· **[Concepts](https://github.com/nickharris808/certified-oss/blob/main/CONCEPTS.md)**
+· **[FAQ](https://github.com/nickharris808/certified-oss/blob/main/FAQ.md)**
+· **[Architecture](https://github.com/nickharris808/certified-oss/blob/main/ARCHITECTURE.md)**
+· **[API reference](https://nickharris808.github.io/certified-oss/api/)**
+
+---
+
+**A recorded verdict is a claim to be checked, never an input to be trusted.**
+
+`certified-kit` is one of nine repositories built on that. The whole story, and the objections answered,
+live at **[certified-oss](https://github.com/nickharris808/certified-oss)** — start there if this
+is the first one you have opened.
