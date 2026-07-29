@@ -1,6 +1,15 @@
 # certified-kit
 
+[![ci](https://github.com/nickharris808/certified-kit/actions/workflows/ci.yml/badge.svg)](https://github.com/nickharris808/certified-kit/actions/workflows/ci.yml)
+![license](https://img.shields.io/badge/license-Apache--2.0-blue)
+![python](https://img.shields.io/badge/python-3.9+-blue)
+![tests](https://img.shields.io/badge/tests-55%20passing-brightgreen)
+
 **One install and one command for the whole toolkit.**
+
+## Why this exists
+
+The portfolio is nine repositories that share one idea, and a newcomer had to find and install them one at a time to try any of it. Nine front doors and no lobby. This is the lobby: one `pip install`, one command, every verb forwarded to the component that owns it.
 
 The portfolio has nine repositories and no front desk. This is the front desk.
 
@@ -16,8 +25,6 @@ certified-kit list
   seal     ok             1.0.0    seal acceptance criteria before you measure
   verify   ok             1.0.0    re-derive a certificate bundle's verdict
 ```
-
-[![ci](https://github.com/nickharris808/certified-kit/actions/workflows/ci.yml/badge.svg)](https://github.com/nickharris808/certified-kit/actions/workflows/ci.yml)
 
 ## 30-second quickstart
 
@@ -90,6 +97,14 @@ this output, so it cannot rot. The digests are deterministic — run it twice an
 The obvious name, `certkit`, is taken on this account by an unrelated project, and its CLI would
 collide. So the package and the command are both `certified-kit`. Nothing else about it changed.
 
+## Honest scope — what this proves, and what it does not
+
+| | |
+|---|---|
+| **Proves** | nothing on its own. Every verdict you see comes from a component, unchanged |
+| **Guarantees** | that exit codes pass through untouched — an abstention is still `4` — and that a missing component is named rather than silently skipped |
+| **Does NOT** | add verification logic, reinterpret a verdict, or make a local score trustworthy. It is a dispatcher |
+
 ## What certified-kit is not
 
 **It adds no verification logic.** Not a line. Everything it can tell you comes from a package
@@ -120,6 +135,15 @@ $ certified-kit build demo
 
 Apache-2.0.
 
+## Licence, citation, contributing
+
+Apache-2.0 — see [LICENSE](LICENSE). If you use this, please cite it:
+[CITATION.cff](CITATION.cff).
+
+The most valuable contribution is **a forgery this project fails to catch** —
+see [CONTRIBUTING.md](CONTRIBUTING.md) and the
+[portfolio-wide guide](https://github.com/nickharris808/certified-oss/blob/main/CONTRIBUTING.md).
+
 ---
 
 **A recorded verdict is a claim to be checked, never an input to be trusted.** Nine repositories are built on it.
@@ -140,6 +164,15 @@ Portfolio-wide: **[Tutorial](https://github.com/nickharris808/certified-oss/blob
 · **[FAQ](https://github.com/nickharris808/certified-oss/blob/main/FAQ.md)**
 · **[Architecture](https://github.com/nickharris808/certified-oss/blob/main/ARCHITECTURE.md)**
 · **[API reference](https://nickharris808.github.io/certified-oss/api/)**
+
+## Licence, citation, contributing
+
+Apache-2.0 — see [LICENSE](LICENSE). If you use this, please cite it:
+[CITATION.cff](CITATION.cff).
+
+The most valuable contribution is **a forgery this project fails to catch** —
+see [CONTRIBUTING.md](CONTRIBUTING.md) and the
+[portfolio-wide guide](https://github.com/nickharris808/certified-oss/blob/main/CONTRIBUTING.md).
 
 ---
 
