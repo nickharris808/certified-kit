@@ -3,7 +3,7 @@
 [![ci](https://github.com/nickharris808/certified-kit/actions/workflows/ci.yml/badge.svg)](https://github.com/nickharris808/certified-kit/actions/workflows/ci.yml)
 ![license](https://img.shields.io/badge/license-Apache--2.0-blue)
 ![python](https://img.shields.io/badge/python-3.9+-blue)
-![tests](https://img.shields.io/badge/tests-55%20passing-brightgreen)
+![tests](https://img.shields.io/badge/tests-55%20tests-blue)
 
 **One install and one command for the whole toolkit.**
 
